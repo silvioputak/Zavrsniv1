@@ -25,12 +25,12 @@ class CheckoutRequest extends FormRequest
     {
         return [
             'email' => 'required|email',
-            'Ime' => 'required',
-            'Adresa' => 'required',
-            'Grad' => 'required',
-            'Županija' => 'required',
-            'Poštanski broj' => 'required',
-            'Telefon' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'province' => 'required',
+            'postalcode' => 'required',
+            'phone' => 'required',
         ];
     }
 }

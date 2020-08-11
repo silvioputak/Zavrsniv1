@@ -20,7 +20,7 @@
         <header class="with-background">
             <div class="top-nav container">
             <div class="top-nav-left">
-                <div class="logo">Pčelarstvo Putak</div>
+            <div class="logo"><a href="/">Pčelarstvo Putak</a></div>
                     {{menu('main','partials.menus.main')}}
                 </div>
                 
@@ -48,7 +48,7 @@
                 <div class="product">
                         <a href="{{route('shop.show', $product->slug)}}"><img src="{{asset('storage/' .$product->image)}}" alt="product"></a>
                         <a href="{{route('shop.show', $product->slug)}}"><div class="product-name">{{$product->name}}</div></a>
-                        <div class="product-price">{{$product->presentPrice()}}</div>
+                        <div class="product-price">{{$product->price}} <span> Kn</span> </div>
                     </div>
                 @endforeach
                     

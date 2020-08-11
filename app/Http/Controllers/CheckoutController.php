@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Order;
+use App\OrderProduct;
 use Illuminate\Http\Request;
 use App\Http\Requests\CheckoutRequest;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -59,58 +60,62 @@ class CheckoutController extends Controller
                 ],
             ]);
 
+            $this->addOrdersTables($request, null);
             // SUCCESSFUL
             Cart::instance('default')->destroy();
             //return back()->with('success_message', 'Thank you! Your payment has been successfully accepted!');
             return redirect()->route('confirmation.index')->with('success_message', 'Thank you! Your payment has been successfully accepted!');
             
         } catch (CardErrorException $e) {
+            $this->addOrdersTables($request, $e->getMessage());
             return back()->withErrors('Error! ' . $e->getMessage());
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    protected function addOrdersTables($request, $error)
     {
-        //
+        $order = Order::create([
+            'user_id' => auth()->user() ? auth()->user()->id : null,
+            'billing_email' => $request->email,
+            'billing_name' => $request->name,
+            'billing_address' => $request->address,
+            'billing_city' => $request->city,
+            'billing_province' => $request->province,
+            'billing_postalcode' => $request->postalcode,
+            'billing_phone' => $request->phone,
+            'billing_name_on_card' => $request->name_on_card,
+            'billing_subtotal' => $this->getNumbers()->get('newSubtotal'),
+            'billing_tax' => $this->getNumbers()->get('newTax'),
+            'billing_total' => $this->getNumbers()->get('newTotal'),
+            'error' => $error,
+        ]);
+
+        foreach (Cart::content() as $item) {
+            OrderProduct::create([
+                'order_id' => $order->id,
+                'product_id' => $item->model->id,
+                'quantity' => $item->qty,
+            ]);
+        }
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    private function getNumbers()
     {
-        //
+        $tax = config('cart.tax') / 100;
+        $newSubtotal = 100;
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1 + $tax);
+
+        return collect([
+            'tax' => $tax,
+            'newSubtotal' => $newSubtotal,
+            'newTax' => $newTax,
+            'newTotal' => $newTotal,
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }

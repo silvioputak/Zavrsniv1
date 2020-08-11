@@ -14,26 +14,26 @@ class ProductsTableSeeder extends Seeder
     {
         for ($i = 1; $i <= 5; $i++) {
             Product::create([
-                'name' => 'Laptop ' . $i,
-                'slug' => 'laptop-' . $i,
-                'details' => [13, 14, 15][array_rand([13, 14, 15])] . ' inch, ' . [1, 2, 3][array_rand([1, 2, 3])] . ' TB SSD, 32GB RAM',
-                'price' => rand(149999, 249999),
+                'name' => 'Med ' . $i,
+                'slug' => 'med-' . $i,
+                'details' => 'Zdrav med',
+                'price' => rand(150, 300),
                 'description' => 'Lorem ' . $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                'image' => 'products/dummy/laptop-'.$i.'.jpg',
+                'image' => 'products/dummy/med-'.$i.'.jpg',
             ]);
         }
 
         
 
-        // Desktops
+        // Propolis
         for ($i = 1; $i <= 5; $i++) {
             Product::create([
-                'name' => 'Desktop ' . $i,
-                'slug' => 'desktop-' . $i,
-                'details' => [24, 25, 27][array_rand([24, 25, 27])] . ' inch, ' . [1, 2, 3][array_rand([1, 2, 3])] . ' TB SSD, 32GB RAM',
-                'price' => rand(249999, 449999),
+                'name' => 'Propolis ' . $i,
+                'slug' => 'propolis-' . $i,
+                'details' => 'Zdrav nacin zivota',
+                'price' => rand(50, 100),
                 'description' => 'Lorem ' . $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                'image' => 'products/dummy/desktop-'.$i.'.jpg',
+                'image' => 'products/dummy/propolis-'.$i.'.jpg',
             ]);
         }
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2020 at 04:33 PM
+-- Generation Time: Aug 11, 2020 at 11:21 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -72,17 +72,17 @@ CREATE TABLE `data_rows` (
 --
 
 INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
-(1, 1, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
-(2, 1, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
-(3, 1, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, NULL, 3),
-(4, 1, 'password', 'password', 'Password', 1, 0, 0, 1, 1, 0, NULL, 4),
-(5, 1, 'remember_token', 'text', 'Remember Token', 0, 0, 0, 0, 0, 0, NULL, 5),
-(6, 1, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 0, NULL, 6),
-(7, 1, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
-(8, 1, 'avatar', 'image', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 8),
-(9, 1, 'user_belongsto_role_relationship', 'relationship', 'Role', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsTo\",\"column\":\"role_id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"roles\",\"pivot\":0}', 10),
-(10, 1, 'user_belongstomany_role_relationship', 'relationship', 'Roles', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"user_roles\",\"pivot\":\"1\",\"taggable\":\"0\"}', 11),
-(11, 1, 'settings', 'hidden', 'Settings', 0, 0, 0, 0, 0, 0, NULL, 12),
+(1, 1, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
+(2, 1, 'name', 'text', 'Ime', 1, 1, 1, 1, 1, 1, '{}', 2),
+(3, 1, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, '{}', 3),
+(4, 1, 'password', 'password', 'Lozinka', 1, 0, 0, 1, 1, 0, '{}', 4),
+(5, 1, 'remember_token', 'text', 'Remember Token', 0, 0, 0, 0, 0, 0, '{}', 5),
+(6, 1, 'created_at', 'timestamp', 'Datum kreiran', 0, 1, 1, 0, 0, 0, '{}', 6),
+(7, 1, 'updated_at', 'timestamp', 'Updated At', 0, 1, 1, 0, 0, 0, '{}', 7),
+(8, 1, 'avatar', 'image', 'Avatar', 0, 1, 1, 1, 1, 1, '{}', 8),
+(9, 1, 'user_belongsto_role_relationship', 'relationship', 'Role', 0, 1, 1, 1, 1, 1, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsTo\",\"column\":\"role_id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"roles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(10, 1, 'user_belongstomany_role_relationship', 'relationship', 'Roles', 0, 1, 1, 1, 1, 1, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"user_roles\",\"pivot\":\"1\",\"taggable\":\"0\"}', 11),
+(11, 1, 'settings', 'hidden', 'Settings', 0, 0, 0, 0, 0, 0, '{}', 12),
 (12, 2, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
 (13, 2, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
 (14, 2, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
@@ -92,7 +92,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (18, 3, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
 (19, 3, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
 (20, 3, 'display_name', 'text', 'Display Name', 1, 1, 1, 1, 1, 1, NULL, 5),
-(21, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
+(21, 1, 'role_id', 'text', 'Pristup', 0, 1, 1, 0, 0, 0, '{}', 9),
 (22, 4, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
 (23, 4, 'parent_id', 'select_dropdown', 'Parent', 0, 0, 1, 1, 1, 1, '{\"default\":\"\",\"null\":\"\",\"options\":{\"\":\"-- None --\"},\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 2),
 (24, 4, 'order', 'text', 'Order', 1, 1, 1, 1, 1, 1, '{\"default\":1}', 3),
@@ -135,7 +135,32 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (61, 7, 'description', 'rich_text_box', 'Opis', 1, 1, 1, 1, 1, 1, '{}', 6),
 (62, 7, 'image', 'image', 'Slika', 0, 1, 1, 1, 1, 1, '{}', 7),
 (63, 7, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 8),
-(64, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9);
+(64, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
+(65, 8, 'id', 'hidden', 'Id', 1, 1, 1, 1, 1, 0, '{}', 1),
+(66, 8, 'user_id', 'number', 'Korisnik Id', 0, 1, 1, 0, 0, 0, '{}', 2),
+(67, 8, 'billing_email', 'text', 'Mail', 1, 1, 1, 1, 1, 0, '{}', 3),
+(68, 8, 'billing_name', 'text', 'Ime', 1, 1, 1, 1, 1, 0, '{}', 4),
+(69, 8, 'billing_address', 'text', 'Adresa', 1, 1, 1, 1, 1, 0, '{}', 5),
+(70, 8, 'billing_city', 'text', 'Grad', 1, 1, 1, 1, 1, 0, '{}', 6),
+(71, 8, 'billing_province', 'text', 'Županija', 1, 1, 1, 1, 1, 0, '{}', 7),
+(72, 8, 'billing_postalcode', 'text', 'Poštanski broj', 1, 1, 1, 1, 1, 0, '{}', 8),
+(73, 8, 'billing_phone', 'text', 'Telefon', 1, 1, 1, 1, 1, 0, '{}', 9),
+(74, 8, 'billing_name_on_card', 'text', 'Ime na kartici', 1, 1, 1, 1, 1, 0, '{}', 10),
+(75, 8, 'billing_subtotal', 'number', 'Neto', 1, 1, 1, 0, 0, 0, '{}', 11),
+(76, 8, 'billing_tax', 'number', 'Porez', 1, 1, 1, 1, 1, 1, '{}', 12),
+(77, 8, 'billing_total', 'number', 'Sveukupno', 1, 1, 1, 1, 1, 1, '{}', 13),
+(78, 8, 'payment_gateway', 'text', 'Način plaćanja', 1, 1, 1, 1, 0, 0, '{}', 14),
+(79, 8, 'shipped', 'checkbox', 'Poslano', 1, 1, 1, 1, 0, 0, '{}', 15),
+(80, 8, 'error', 'text', 'Greška', 0, 1, 1, 0, 0, 0, '{}', 16),
+(81, 8, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 17),
+(82, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 18),
+(83, 9, 'id', 'hidden', 'Id', 1, 1, 1, 1, 1, 0, '{}', 0),
+(84, 9, 'order_id', 'text', 'Order Id', 0, 1, 1, 1, 1, 0, '{}', 2),
+(85, 9, 'product_id', 'text', 'Product Id', 0, 1, 1, 1, 1, 0, '{}', 3),
+(86, 9, 'quantity', 'text', 'Quantity', 1, 1, 1, 1, 1, 0, '{}', 4),
+(87, 9, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(88, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(89, 1, 'email_verified_at', 'timestamp', 'Email kreiran', 0, 1, 1, 0, 0, 0, '{}', 6);
 
 -- --------------------------------------------------------
 
@@ -166,13 +191,15 @@ CREATE TABLE `data_types` (
 --
 
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
-(1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2020-08-09 08:22:31', '2020-08-09 08:22:31'),
+(1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2020-08-09 08:22:31', '2020-08-11 07:20:08'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2020-08-09 08:22:31', '2020-08-09 08:22:31'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2020-08-09 08:22:31', '2020-08-09 08:22:31'),
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2020-08-09 08:22:38', '2020-08-09 08:22:38'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2020-08-09 08:22:41', '2020-08-09 08:22:41'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-08-09 08:22:43', '2020-08-09 08:22:43'),
-(7, 'products', 'products', 'Proizvodi', 'Proizvodi', NULL, 'App\\Product', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-08-09 08:50:50', '2020-08-10 12:21:58');
+(7, 'products', 'products', 'Proizvodi', 'Proizvodi', NULL, 'App\\Product', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-08-09 08:50:50', '2020-08-10 12:21:58'),
+(8, 'orders', 'orders', 'Narudžbe', 'Narudžbe', 'voyager-documentation', 'App\\Order', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-08-10 14:46:57', '2020-08-11 06:47:13'),
+(9, 'order_product', 'order-product', 'Order Product', 'Order Products', NULL, 'App\\OrderProduct', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-08-11 06:28:46', '2020-08-11 06:28:46');
 
 -- --------------------------------------------------------
 
@@ -238,22 +265,19 @@ CREATE TABLE `menu_items` (
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 (1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2020-08-09 08:22:33', '2020-08-09 08:22:33', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2020-08-09 08:22:33', '2020-08-09 08:22:33', 'voyager.media.index', NULL),
-(3, 1, 'Korisnici', '', '_self', 'voyager-person', '#000000', NULL, 3, '2020-08-09 08:22:33', '2020-08-10 12:22:52', 'voyager.users.index', 'null'),
-(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 4, '2020-08-09 08:22:34', '2020-08-09 09:14:55', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2020-08-09 08:22:34', '2020-08-09 08:22:34', NULL, NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2020-08-09 08:22:33', '2020-08-11 06:29:51', 'voyager.media.index', NULL),
+(3, 1, 'Korisnici', '', '_self', 'voyager-person', '#000000', NULL, 2, '2020-08-09 08:22:33', '2020-08-11 06:29:51', 'voyager.users.index', 'null'),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 6, '2020-08-09 08:22:34', '2020-08-11 06:29:52', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2020-08-09 08:22:34', '2020-08-09 09:14:53', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2020-08-09 08:22:34', '2020-08-09 09:14:53', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2020-08-09 08:22:34', '2020-08-09 09:14:53', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2020-08-09 08:22:34', '2020-08-09 09:14:53', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 10, '2020-08-09 08:22:34', '2020-08-09 09:14:53', 'voyager.settings.index', NULL),
-(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 8, '2020-08-09 08:22:39', '2020-08-09 08:22:39', 'voyager.categories.index', NULL),
-(12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 6, '2020-08-09 08:22:43', '2020-08-09 08:22:43', 'voyager.posts.index', NULL),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2020-08-09 08:22:44', '2020-08-09 08:22:44', 'voyager.pages.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 7, '2020-08-09 08:22:34', '2020-08-11 06:29:52', 'voyager.settings.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2020-08-09 08:45:57', '2020-08-09 09:14:53', 'voyager.hooks', NULL),
-(15, 1, 'Proizvodi', '', '_self', 'voyager-bag', '#000000', NULL, 2, '2020-08-09 08:50:51', '2020-08-10 12:22:44', 'voyager.products.index', 'null'),
+(15, 1, 'Proizvodi', '', '_self', 'voyager-bag', '#000000', NULL, 3, '2020-08-09 08:50:51', '2020-08-11 06:29:51', 'voyager.products.index', 'null'),
 (20, 4, 'Proizvodi', '', '_self', NULL, '#000000', NULL, 11, '2020-08-10 12:14:55', '2020-08-10 12:14:55', 'shop.index', NULL),
-(21, 4, 'Košarica', '', '_self', NULL, '#000000', NULL, 12, '2020-08-10 12:15:05', '2020-08-10 12:15:05', 'cart.index', NULL);
+(21, 4, 'Košarica', '', '_self', NULL, '#000000', NULL, 12, '2020-08-10 12:15:05', '2020-08-10 12:15:05', 'cart.index', NULL),
+(22, 1, 'Narudžbe', '', '_self', 'voyager-documentation', NULL, NULL, 4, '2020-08-10 14:46:58', '2020-08-10 14:47:16', 'voyager.orders.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -300,7 +324,64 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (26, '2018_03_16_000000_make_settings_value_nullable', 1),
 (27, '2019_08_19_000000_create_failed_jobs_table', 1),
 (28, '2020_08_08_111840_create_products_table', 1),
-(29, '2020_08_08_195003_add_image_to_products_table', 1);
+(29, '2020_08_08_195003_add_image_to_products_table', 1),
+(30, '2020_08_10_143857_create_orders_table', 2),
+(31, '2020_08_10_154345_create_orders_table', 3),
+(32, '2020_08_10_160749_create_order_product_table', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `billing_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_province` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_postalcode` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_name_on_card` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `billing_subtotal` int(11) NOT NULL,
+  `billing_tax` int(11) NOT NULL,
+  `billing_total` int(11) NOT NULL,
+  `payment_gateway` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'stripe',
+  `shipped` tinyint(1) NOT NULL DEFAULT 0,
+  `error` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_product`
+--
+
+CREATE TABLE `order_product` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `order_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `product_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `quantity` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `order_product`
+--
+
+INSERT INTO `order_product` (`id`, `order_id`, `product_id`, `quantity`, `created_at`, `updated_at`) VALUES
+(1, NULL, 7, 1, '2020-08-10 14:33:34', '2020-08-10 14:33:34'),
+(2, NULL, 10, 1, '2020-08-10 14:40:10', '2020-08-10 14:40:10'),
+(3, NULL, 6, 1, '2020-08-10 14:51:47', '2020-08-10 14:51:47'),
+(4, NULL, 8, 1, '2020-08-10 14:52:43', '2020-08-10 14:52:43'),
+(5, NULL, 8, 1, '2020-08-11 07:13:27', '2020-08-11 07:13:27'),
+(6, NULL, 9, 1, '2020-08-11 07:13:27', '2020-08-11 07:13:27');
 
 -- --------------------------------------------------------
 
@@ -406,7 +487,17 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (43, 'read_products', 'products', '2020-08-09 08:50:50', '2020-08-09 08:50:50'),
 (44, 'edit_products', 'products', '2020-08-09 08:50:50', '2020-08-09 08:50:50'),
 (45, 'add_products', 'products', '2020-08-09 08:50:50', '2020-08-09 08:50:50'),
-(46, 'delete_products', 'products', '2020-08-09 08:50:50', '2020-08-09 08:50:50');
+(46, 'delete_products', 'products', '2020-08-09 08:50:50', '2020-08-09 08:50:50'),
+(47, 'browse_orders', 'orders', '2020-08-10 14:46:58', '2020-08-10 14:46:58'),
+(48, 'read_orders', 'orders', '2020-08-10 14:46:58', '2020-08-10 14:46:58'),
+(49, 'edit_orders', 'orders', '2020-08-10 14:46:58', '2020-08-10 14:46:58'),
+(50, 'add_orders', 'orders', '2020-08-10 14:46:58', '2020-08-10 14:46:58'),
+(51, 'delete_orders', 'orders', '2020-08-10 14:46:58', '2020-08-10 14:46:58'),
+(52, 'browse_order_product', 'order_product', '2020-08-11 06:28:46', '2020-08-11 06:28:46'),
+(53, 'read_order_product', 'order_product', '2020-08-11 06:28:46', '2020-08-11 06:28:46'),
+(54, 'edit_order_product', 'order_product', '2020-08-11 06:28:46', '2020-08-11 06:28:46'),
+(55, 'add_order_product', 'order_product', '2020-08-11 06:28:46', '2020-08-11 06:28:46'),
+(56, 'delete_order_product', 'order_product', '2020-08-11 06:28:46', '2020-08-11 06:28:46');
 
 -- --------------------------------------------------------
 
@@ -469,7 +560,17 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (43, 1),
 (44, 1),
 (45, 1),
-(46, 1);
+(46, 1),
+(47, 1),
+(48, 1),
+(49, 1),
+(50, 1),
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1);
 
 -- --------------------------------------------------------
 
@@ -528,17 +629,18 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `slug`, `details`, `price`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Vosak', 'laptop-1', '15 inch, 2 TB SSD, 32GB RAM', 231172, '<p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\LFDK1m9Mqpk3pOMPLlxQ.jpg', '2020-08-09 08:22:30', '2020-08-09 11:04:18'),
-(2, 'Cvijetni prah', 'laptop-2', '14 inch, 3 TB SSD, 32GB RAM', 247003, '<p>Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\PD95NNMVSjDSmEY6Pp0l.jpg', '2020-08-09 08:22:30', '2020-08-09 11:04:36'),
-(3, 'Med kadulja', 'med-2', '13 inch, 1 TB SSD, 32GB RAM', 197177, '<p>Lorem 3 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\NE3LwK8Xo1U6Yf0kt44b.jpg', '2020-08-09 08:22:31', '2020-08-09 09:24:17'),
-(4, 'Laptop 4', 'med-3', '13 inch, 2 TB SSD, 32GB RAM', 244132, '<p>Lorem 4 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\AgatvcyuFGWHs2ItYpVa.jpg', '2020-08-09 08:22:31', '2020-08-09 09:24:53'),
-(5, 'Laptop 5', 'laptop-5', '15 inch, 2 TB SSD, 32GB RAM', 208317, '<p>Lorem 5 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\zzmIEJcY7JAKfaqZl3nr.jpg', '2020-08-09 08:22:31', '2020-08-09 09:25:02'),
-(6, 'Desktop 1', 'desktop-1', '24 inch, 1 TB SSD, 32GB RAM', 345219, '<p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\3TVkjqjqNYd70sb1U2cx.jpg', '2020-08-09 08:22:31', '2020-08-09 09:25:11'),
-(7, 'Desktop 2', 'desktop-2', '27 inch, 3 TB SSD, 32GB RAM', 315251, '<p>Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\4pc94RTr2gaZnYQurSLS.jpg', '2020-08-09 08:22:31', '2020-08-09 09:25:22'),
-(8, 'Propolis', 'propolis-1', '24 inch, 1 TB SSD, 32GB RAM', 403071, '<p>Lorem 3 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\TTSf3EooEcbzmaWnTnvE.jpg', '2020-08-09 08:22:31', '2020-08-09 10:56:29'),
-(9, 'Desktop 4', 'desktop-4', '27 inch, 2 TB SSD, 32GB RAM', 445928, '<p>Lorem 4 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\uekIhDm8sTIbv8zksEsd.jpg', '2020-08-09 08:22:31', '2020-08-09 10:58:58'),
-(10, 'Kraljevski Netkar', 'desktop-5', '25 inch, 2 TB SSD, 32GB RAM', 293559, '<p>Lorem 5 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\rm280fVZVQY5GBpBzkSJ.jpg', '2020-08-09 08:22:31', '2020-08-09 11:04:01'),
-(11, 'Med Kesten', 'med-1', 'Jako zdrav med', 27, '<p>Probajte ljudi stvarno je dobar</p>', 'products\\August2020\\Opus1DyYxfePjVJwWs28.jpg', '2020-08-09 09:17:42', '2020-08-09 09:20:32');
+(1, 'Vosak', 'propolis-4', 'Težina 0.40 kg', 30, '<p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\LFDK1m9Mqpk3pOMPLlxQ.jpg', '2020-08-09 08:22:30', '2020-08-11 07:03:01'),
+(2, 'Cvjetni prah', 'propolis-5', 'Težina 0.25 kg', 46, '<p>Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\PD95NNMVSjDSmEY6Pp0l.jpg', '2020-08-09 08:22:30', '2020-08-11 07:03:31'),
+(3, 'Med Malina', 'med-2', 'Težina 0.75 kg', 50, '<p>Lorem 3 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\NE3LwK8Xo1U6Yf0kt44b.jpg', '2020-08-09 08:22:31', '2020-08-11 06:59:50'),
+(4, 'Med Cvjetni', 'med-3', 'Težina 0.75 kg', 49, '<p>Lorem 4 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\AgatvcyuFGWHs2ItYpVa.jpg', '2020-08-09 08:22:31', '2020-08-11 06:58:09'),
+(5, 'Med Kadulja', 'med-4', 'Težina 0.75 kg', 24, '<p>Lorem 5 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\zzmIEJcY7JAKfaqZl3nr.jpg', '2020-08-09 08:22:31', '2020-08-11 07:00:07'),
+(6, 'Med Kesten', 'med-5', 'Težina 0.75 kg', 34, '<p>Lorem 1 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\3TVkjqjqNYd70sb1U2cx.jpg', '2020-08-09 08:22:31', '2020-08-11 07:03:42'),
+(7, 'Med Lipa', 'med-6', 'Težina 0.75 kg', 50, '<p>Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\4pc94RTr2gaZnYQurSLS.jpg', '2020-08-09 08:22:31', '2020-08-11 07:01:21'),
+(8, 'Propolis', 'propolis-1', 'Težina 0.20 kg', 75, '<p>Lorem 3 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\YYMWgfnEiDbI2SVSWvdt.jpg', '2020-08-09 08:22:31', '2020-08-11 07:01:43'),
+(9, 'Propolis u kapima', 'propolis-2', 'Težina 0.20 kg', 56, '<p>Lorem 4 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\gdHEXTiG1Fpz8MrHwOBR.jpg', '2020-08-09 08:22:31', '2020-08-11 07:02:15'),
+(10, 'Kraljevski Netkar', 'propolis-3', 'Težina 0.50 kg', 89, '<p>Lorem 5 ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!</p>', 'products\\August2020\\rm280fVZVQY5GBpBzkSJ.jpg', '2020-08-09 08:22:31', '2020-08-11 07:02:38'),
+(11, 'Med Bagrem', 'med-1', 'Težina 0.50 kg', 27, '<p>Lorem ipsum!!</p>', 'products\\August2020\\NJLVhUVWwzIqjNDhf7FU.jpg', '2020-08-09 09:17:42', '2020-08-11 07:09:13'),
+(12, 'Med Medljikovac', 'med-7', 'Težina 0.50 kg', 40, '<p>Lorem ipsum</p>', 'products\\August2020\\aa1pmJNhzj30vmc2Togm.jpg', '2020-08-11 07:10:19', '2020-08-11 07:10:19');
 
 -- --------------------------------------------------------
 
@@ -587,13 +689,13 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (1, 'site.title', 'Site Title', 'Site Title', '', 'text', 1, 'Site'),
 (2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
 (3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
-(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', '', '', 'text', 4, 'Site'),
-(5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
-(6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
-(7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
+(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
+(5, 'admin.bg_image', 'Admin Background Image', 'settings\\August2020\\gqoXLYvKhqutcoUdtWYD.jpg', '', 'image', 5, 'Admin'),
+(6, 'admin.title', 'Admin Title', 'Admin', '', 'text', 1, 'Admin'),
+(7, 'admin.description', 'Admin Description', 'Dobro došli na admin sučelje!', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
-(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', '', '', 'text', 1, 'Admin');
+(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -673,8 +775,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$giVzpUq0.l0v/TwBCd0n/udnWSNV6M8vW2XSXY7YJBN6W/fhqOW6a', 'o7WgmsR5Omsa8dwcRoRYQjxcsp3Vx3BcAgL0513fOl0UEi7CAZBW80zaGl2v', NULL, '2020-08-09 08:22:41', '2020-08-09 08:22:41'),
-(2, 2, 'ss', 'spsilvio12@hotmail.com', 'users/default.png', NULL, '$2y$10$LkRmFiDhC1sgiIduGocT8e/UxCPo9jdB2A.ImWgenY2Yue5jKu6Te', NULL, NULL, '2020-08-10 09:53:04', '2020-08-10 09:53:04');
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$giVzpUq0.l0v/TwBCd0n/udnWSNV6M8vW2XSXY7YJBN6W/fhqOW6a', 'VXkLci4hdUVDuiXyiFB1pG0Z38fPrDTs7uQKpIuohJ4dWNsc4BdkgtiXoSV5', NULL, '2020-08-09 08:22:41', '2020-08-09 08:22:41'),
+(4, NULL, 'Silvio', 'silvio.putak@gmail.com', 'users/default.png', NULL, '$2y$10$sgGofxUas01SLcLIweeRWOFMKe7syRZ3nJ6PjDp3fOkdd1iBIdBDi', NULL, '{\"locale\":\"en\"}', '2020-08-11 07:20:53', '2020-08-11 07:20:53');
 
 -- --------------------------------------------------------
 
@@ -686,6 +788,13 @@ CREATE TABLE `user_roles` (
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `role_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_roles`
+--
+
+INSERT INTO `user_roles` (`user_id`, `role_id`) VALUES
+(4, 2);
 
 --
 -- Indexes for dumped tables
@@ -739,6 +848,21 @@ ALTER TABLE `menu_items`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `orders_user_id_foreign` (`user_id`);
+
+--
+-- Indexes for table `order_product`
+--
+ALTER TABLE `order_product`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_product_order_id_foreign` (`order_id`),
+  ADD KEY `order_product_product_id_foreign` (`product_id`);
 
 --
 -- Indexes for table `pages`
@@ -834,13 +958,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -858,13 +982,25 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `order_product`
+--
+ALTER TABLE `order_product`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -876,7 +1012,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -888,7 +1024,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -912,7 +1048,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -935,6 +1071,19 @@ ALTER TABLE `data_rows`
 --
 ALTER TABLE `menu_items`
   ADD CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `order_product`
+--
+ALTER TABLE `order_product`
+  ADD CONSTRAINT `order_product_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `order_product_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `permission_role`
