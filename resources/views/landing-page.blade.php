@@ -42,7 +42,7 @@
         <div class="featured-section">
 
             <div class="container">
-                <h1 class="text-center">Naši Proizvodi</h1>
+                <h1 class="text-center">Proizvodi</h1>
                 <div class="products text-center">
                 @foreach ($products as $product)
                 <div class="product">

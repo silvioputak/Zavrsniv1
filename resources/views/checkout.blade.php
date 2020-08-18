@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Checkout')
+@section('title', 'Plaćanje')
 
 @section('extra-css')
 
@@ -111,7 +111,7 @@
 
 
             <div class="checkout-table-container">
-                <h2>Your Order</h2>
+                <h2>Vaša narudžba</h2>
 
                 <div class="checkout-table">
                     @foreach(Cart::content() as $item)
