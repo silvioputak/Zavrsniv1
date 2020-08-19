@@ -3,6 +3,13 @@
     <li><a href="{{ route('register') }}">Registracija</a></li>
     <li><a href="{{ route('login') }}">Prijava</a></li>
     @else
+    
+    <li>
+        <a href="/admin">
+        {{ ucwords(Auth::user()->name) }}
+        </a>
+    </li>
+    
     <li>
         <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
