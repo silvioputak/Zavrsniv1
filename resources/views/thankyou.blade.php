@@ -12,7 +12,7 @@
 
    <div class="thank-you-section">
        <h1>Zahvaljujemo se  <br> na narudžbi!</h1>
-       <p>Narudžba vam je poslana na mail!</p>
+       <p></p>
        <div class="spacer"></div>
        <div>
            <a href="{{ url('/') }}" class="button">Početna</a>

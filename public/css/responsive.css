@@ -146,6 +146,18 @@
   .checkout-section .checkout-table-container {
     margin-left: 10px;
   }
+
+  .my-profile input {
+    width: 100%;
+  }
+
+  .my-orders .order-header-items {
+    display: block;
+  }
+
+  .my-orders .order-header-items > div {
+    margin-bottom: 14px;
+  }
 }
 
 /* Small Devices, Tablets */

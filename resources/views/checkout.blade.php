@@ -47,32 +47,37 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Ime</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required >
+                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required  minlength="3" maxlength="30">
                     </div>
                     <div class="form-group">
                         <label for="address">Adresa</label>
-                        <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" required>
+                        <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" required
+                        minlength="3" maxlength="30">
                     </div>
 
                     <div class="half-form">
                         <div class="form-group">
                             <label for="city">Grad</label>
-                            <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required>
+                            <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required
+                            minlength="3" maxlength="30">
                         </div>
                         <div class="form-group">
                             <label for="province">Županija</label>
-                            <input type="text" class="form-control" id="province" name="province" value="{{ old('province') }}" required>
+                            <input type="text" class="form-control" id="province" name="province" value="{{ old('province') }}" required
+                            minlength="3" maxlength="30">
                         </div>
                     </div> <!-- end half-form -->
 
                     <div class="half-form">
                         <div class="form-group">
                             <label for="postalcode">Poštanski broj</label>
-                            <input type="text" class="form-control" id="postalcode" name="postalcode" value="{{ old('postalcode') }}" required>
+                            <input type="number" class="form-control" id="postalcode" name="postalcode" value="{{ old('postalcode') }}" required
+                            min="10000" max="99999">
                         </div>
                         <div class="form-group">
                             <label for="phone">Telefon</label>
-                            <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
+                            <input type="number" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required
+                            min="1000000" max="10000000000">
                         </div>
                     </div> <!-- end half-form -->
 
@@ -82,7 +87,7 @@
 
                     <div class="form-group">
                         <label for="name_on_card">Ime na kartici</label>
-                        <input type="text" class="form-control" id="name_on_card" name="name_on_card" value="" required>
+                        <input type="text" class="form-control" id="name_on_card" name="name_on_card" value="" required minlength="3" maxlength="20">
                     </div>
                     
 

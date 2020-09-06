@@ -62,15 +62,15 @@
                                     <td>{{ $order->billing_city }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Subtotal</td>
+                                    <td>Neto</td>
                                     <td>{{ $order->billing_subtotal }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Tax</td>
+                                    <td>Porez</td>
                                     <td>{{ $order->billing_tax }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Total</td>
+                                    <td>Ukupno</td>
                                     <td>{{ $order->billing_total }}</td>
                                 </tr>
                             </tbody>

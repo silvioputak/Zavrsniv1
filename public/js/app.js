@@ -45168,9 +45168,9 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Desktop\Zavrsni rad\PROJEKT\laravel\resources\assets\js\app.js */"./resources/assets/js/app.js");
-__webpack_require__(/*! D:\Desktop\Zavrsni rad\PROJEKT\laravel\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\Desktop\Zavrsni rad\PROJEKT\laravel\resources\assets\sass\responsive.scss */"./resources/assets/sass/responsive.scss");
+__webpack_require__(/*! D:\Desktop\Zavrsni rad\PROJEKT\Zavrsniv1\resources\assets\js\app.js */"./resources/assets/js/app.js");
+__webpack_require__(/*! D:\Desktop\Zavrsni rad\PROJEKT\Zavrsniv1\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\Desktop\Zavrsni rad\PROJEKT\Zavrsniv1\resources\assets\sass\responsive.scss */"./resources/assets/sass/responsive.scss");
 
 
 /***/ })
