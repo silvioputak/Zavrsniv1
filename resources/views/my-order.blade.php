@@ -30,7 +30,7 @@
                         <div class="order-header-items">
                             <div>
                                 <div class="uppercase font-bold">Datum narudžbe</div>
-                                <div>{{ $order->created_at }}</div>
+                                <div>{{date('d-m-Y', strtotime($order->created_at))}}</div>
                             </div>
                             <div>
                                 <div class="uppercase font-bold">Broj narudžbe</div>
@@ -63,15 +63,15 @@
                                 </tr>
                                 <tr>
                                     <td>Neto</td>
-                                    <td>{{ $order->billing_subtotal }}</td>
+                                    <td>{{ $order->billing_subtotal }} <span> Kn</span></td>
                                 </tr>
                                 <tr>
                                     <td>Porez</td>
-                                    <td>{{ $order->billing_tax }}</td>
+                                    <td>{{ $order->billing_tax }} <span> Kn</span></td>
                                 </tr>
                                 <tr>
                                     <td>Ukupno</td>
-                                    <td>{{ $order->billing_total }}</td>
+                                    <td>{{ $order->billing_total }} <span> Kn</span></td>
                                 </tr>
                             </tbody>
                         </table>

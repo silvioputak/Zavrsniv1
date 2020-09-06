@@ -17,6 +17,7 @@ class OrdersController extends Controller
     {
         //$orders = auth()->user()->orders;
         $orders = auth()->user()->orders()->with('products')->get();
+        
 
         return view('my-orders')->with('orders',$orders);
     }

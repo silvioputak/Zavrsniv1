@@ -103,7 +103,7 @@ class CheckoutController extends Controller
     private function getNumbers()
     {
         $tax = config('cart.tax') / 100;
-        $newSubtotal = 100;
+        $newSubtotal = Cart::subtotal();
         $newTax = $newSubtotal * $tax;
         $newTotal = $newSubtotal * (1 + $tax);
 

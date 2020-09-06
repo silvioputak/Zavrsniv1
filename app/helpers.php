@@ -2,7 +2,9 @@
 
 use Carbon\Carbon;
 
-function productImage($path)
+
+
+function presentDate($date)
 {
-    return $path && file_exists('./storage/'.$path) ? asset('storage/'.$path) : asset('img/not-found.jpg');
+    return Carbon::parse($date)->format('M d, Y');
 }

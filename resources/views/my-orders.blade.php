@@ -22,13 +22,16 @@
         <div>
             <h1 class="stylish-heading">Moje narudžbe</h1>
             <div>
+                
+                    
+                
                 @foreach ($orders as $order)
                 <div class="order-container">
                     <div class="order-header">
                         <div class="order-header-items">
                             <div>
                                 <div class="uppercase font-bold">Datum</div>
-                                <div>{{ $order->created_at }}</div>
+                                <div>{{date('d-m-Y', strtotime($order->created_at))}}</div>
                             </div>
                             <div>
                                 <div class="uppercase font-bold">Broj narudžbe</div>
@@ -63,6 +66,7 @@
                     </div>
                 </div> <!-- end order-container -->
                 @endforeach
+               
             </div>
         </div>
     </div>
